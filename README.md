@@ -5,8 +5,8 @@
 
 This is the [CSE-30872-FA20] reading and challenge assignments repository for:
 
-- **Name**:     Domer McDomerson
-- **NetID**:    dmcdomer
+- **Name**:     Pablo Martinez-Abrego Gonzalez
+- **NetID**:    pmarti22
 
 [CSE-30872-FA20]:   https://www3.nd.edu/~pbui/teaching/cse.30872.fa20/
 
