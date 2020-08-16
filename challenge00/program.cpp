@@ -10,32 +10,32 @@ using namespace std;
 // While we read the matrix, we are already performing the rotation
 void read_rotate_matrix(int N, int *matrix){
 
-  int k = N;
+	int k = N;
 
-  for(int i = 0; i < N; i++){
-    for(int j = 0; j < N; j++){
-      cin >> *((matrix+j*N) + (k - 1));
-    }
-    k -= 1;
-  }
+	for(int i = 0; i < N; i++){
+		for(int j = 0; j < N; j++){
+			cin >> *((matrix+j*N) + (k - 1));
+		}
+		k -= 1;
+	}
 }
 
 // We simply print the matrix in order
 void print_matrix(int N, int* matrix){
 
-  for(int i = 0; i < N; i++){
-    for(int j = 0; j < N; j++){
-      cout << *((matrix+i*N) + j);
+	for(int i = 0; i < N; i++){
+		for(int j = 0; j < N; j++){
+			cout << *((matrix+i*N) + j);
 
-      if(j < N-1){
-        cout << " ";
-      }
-    }
+			if(j < N-1){
+				cout << " ";
+			}
+		}
 
-    if(i != N-1){
-      cout << endl;
-    }
-  }
+		if(i != N-1){
+			cout << endl;
+		}
+	}
 }
 
 int main(){
@@ -47,16 +47,16 @@ int main(){
 
 		cin >> N;
 
-    // Formatting
+		// Formatting
 		if(N == 0){
 			cout << endl;
 			break;
 		}
 
 		int matrix[N][N];
-    read_rotate_matrix(N, (int *)matrix);
+		read_rotate_matrix(N, (int *)matrix);
 
-    // Formatting
+		// Formatting
 		if(first){
 			first = false;
 		}
@@ -64,6 +64,6 @@ int main(){
 			cout << endl << endl;
 		}
 
-    print_matrix(N, (int *)matrix);
+		print_matrix(N, (int *)matrix);
 	}
 }
