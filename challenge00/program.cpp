@@ -40,7 +40,7 @@ int main() {
 	int N = 1;
 	bool first = true;
 
-  while(N > 0) {
+  while (N > 0) {
 		cin >> N;
 
     // Formatting
