@@ -21,23 +21,24 @@ bool check_balance(string s) {
 				left.push(s[j]);
 			}
 		// Go to the last character of closing TAG to iterate backwards
-		} else if(s[i] == '/' && s[i-1] == '<') {
-			while(s[i] != '>' && i <= s.size()){
+		} else if (s[i] == '/' && s[i-1] == '<') {
+			while (s[i] != '>' && i <= s.size()) {
 				i++;
 			}
 			int temp = i--; // Temporary variable for i after iterating backwards
+
 			// Iterate backwards to compare complete TAG to the TAG in stack
 			while(true){
-				if(i+1 > s.size() || i < 0 || left.empty()) {
+				if (i+1 > s.size() || i < 0 || left.empty()) {
 					return false;
 				}
-				if (s[i] == left.top()){
+				if (s[i] == left.top()) {
 					left.pop();
 					i--;
 				} else {
 					return false;
 				}
-				if(s[i] == '/') {
+				if (s[i] == '/') {
 					i = temp;
 					break;
 				}
