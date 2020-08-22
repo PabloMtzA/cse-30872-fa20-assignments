@@ -9,7 +9,6 @@ using namespace std;
 
 // Function that checks how many times s2 can be formed with s1
 int check_words(string s1, string s2) {
-
 	int s2i = 0;
 	int count = 0;
 
@@ -28,9 +27,7 @@ int check_words(string s1, string s2) {
 
 // Function that reads in line by line
 void read_words(string s1, string s2) {
-
 	while (cin >> s1 >> s2) {
-
 		if (s1.empty()) {
 			break;
 		}
@@ -39,15 +36,12 @@ void read_words(string s1, string s2) {
 		cout << count << endl;
 
 	}
-
 }
 
 // Main Function
-int main(){
-
+int main() {
 	string s1;
 	string s2;
 
 	read_words(s1, s2);
-
 }
