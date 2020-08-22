@@ -27,8 +27,9 @@ bool check_balance(string s) {
 			}
 			int temp = i--; // Temporary variable for i after iterating backwards
 
+
 			// Iterate backwards to compare complete TAG to the TAG in stack
-			while(true){
+			while (true) {
 				if (i+1 > s.size() || i < 0 || left.empty()) {
 					return false;
 				}
