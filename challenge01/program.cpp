@@ -34,7 +34,6 @@ void read_words(string s1, string s2) {
 
 		int count = check_words(s1, s2);
 		cout << count << endl;
-
 	}
 }
 
