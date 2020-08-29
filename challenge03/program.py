@@ -28,29 +28,27 @@ def binary_search(v, start, end, target):
         return middle
     if target > v[middle]:
         return binary_search(v, middle + 1, end, target)
-    else:
-        return binary_search(v, start, middle - 1, target)
+    return binary_search(v, start, middle - 1, target)
 
 # Search in which sub array the target is and apply binary search
 def search_target(v, target, pivot):
     if target > v[len(v)-1] and target <= v[pivot-1]:
         return binary_search(v, 0, pivot-1, target)
-    else:
-        return binary_search(v, pivot, len(v)-1, target)
+    return binary_search(v, pivot, len(v)-1, target)
 
 # Main function
 def main():
-    line_num = 0;
+    line_num = 0
     for line in sys.stdin:
-        line_num+=1
+        line_num +=1
         if line_num % 2 != 0:
-                v = list(map(int, line.strip().split()))
+            v = list(map(int, line.strip().split()))
         else:
             target = int(line.strip())
             pivot = search_pivot(v)
             index = search_target(v, target, pivot)
             if index != -1 and pivot != -1:
-                print(str(target) + " found at index " + str(index));
+                print(str(target) + " found at index " + str(index))
             else:
                 print(str(target) + " was not found")
 
