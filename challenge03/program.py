@@ -32,8 +32,7 @@ def binary_search(v, start, end, target):
 
 # Search in which sub array the target is and apply binary search
 def search_target(v, target, pivot):
-    end = len(v) - 1
-    if target > v[end] and target <= v[pivot-1]:
+    if target > v[len(v)-1] and target <= v[pivot-1]:
         return binary_search(v, 0, pivot-1, target)
     return binary_search(v, pivot, len(v)-1, target)
 
@@ -41,7 +40,7 @@ def search_target(v, target, pivot):
 def main():
     line_num = 0
     for line in sys.stdin:
-        line_num+= 1
+        line_num += 1
         if line_num % 2 != 0:
             v = list(map(int, line.strip().split()))
         else:
