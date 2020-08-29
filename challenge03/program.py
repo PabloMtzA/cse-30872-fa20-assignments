@@ -5,17 +5,17 @@
 
 import sys
 
+# Find the pivot point to divide into two sub arrays
 def search_pivot(v):
-    # Find the pivot point to divide into two sub arrays
-    start = 0;
-    end = len(v) - 1;
-    while(start < end):
+    start = 0
+    end = len(v) - 1
+    while start < end:
         middle = (start + end) // 2
-        if(v[middle] > v[end]):
+        if v[middle] > v[end]:
             start = middle + 1
         else:
             end = middle - 1
-        if(v[middle] < v[middle+1] and v[middle] < v[middle-1]):
+        if v[middle] < v[middle+1] and v[middle] < v[middle-1]:
             return middle
     return start
 
@@ -33,7 +33,7 @@ def binary_search(v, start, end, target):
 
 # Search in which sub array the target is and apply binary search
 def search_target(v, target, pivot):
-    if (target > v[len(v)-1] and target <= v[pivot-1]):
+    if target > v[len(v)-1] and target <= v[pivot-1]:
         return binary_search(v, 0, pivot-1, target)
     else:
         return binary_search(v, pivot, len(v)-1, target)
@@ -43,13 +43,13 @@ def main():
     line_num = 0;
     for line in sys.stdin:
         line_num+=1
-        if(line_num % 2 != 0):
+        if line_num % 2 != 0:
                 v = list(map(int, line.strip().split()))
         else:
             target = int(line.strip())
             pivot = search_pivot(v)
             index = search_target(v, target, pivot)
-            if(index != -1 and pivot != -1):
+            if index != -1 and pivot != -1:
                 print(str(target) + " found at index " + str(index));
             else:
                 print(str(target) + " was not found")
