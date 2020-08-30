@@ -10,8 +10,8 @@ Person = collections.namedtuple('People', 'name rank suit')
 
 # Functions
 def compare_ranks(a, b):
-    ar = a.rank;
-    br = b.rank;
+    ar = a.rank
+    br = b.rank
     if ar == 'A':
         ar = 14
     if br == 'A':
@@ -46,11 +46,11 @@ def main():
 
         i = 1
         for person in people:
-            if(i != n):
-                print(person[0] + ", ", end = '')
+            if i != n:
+                print(person[0] + ", ", end='')
             else:
                 print(person[0])
-            i +=1
+            i += 1
 
         n = int(sys.stdin.readline())
 
