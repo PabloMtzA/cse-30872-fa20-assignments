@@ -30,19 +30,19 @@ def compare_ranks(a, b):
         br = 11
     if int(ar) > int(br):
         return 1
-    elif int(ar) < int(br):
+    if int(ar) < int(br):
         return -1
     return 0
 
 def main():
-    sort_key1 = functools.cmp_to_key(compare_ranks)
+    sort_key = functools.cmp_to_key(compare_ranks)
 
     n = int(sys.stdin.readline())
     while n != 0:
         people = [Person(*sys.stdin.readline().split()) for i in range(n)]
 
         people = sorted(people, key=lambda p: p.suit, reverse=True)
-        people = sorted(people, key=sort_key1, reverse=True)
+        people = sorted(people, key=sort_key, reverse=True)
 
         i = 1
         for person in people:
