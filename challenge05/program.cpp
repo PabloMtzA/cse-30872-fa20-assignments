@@ -21,7 +21,6 @@ int check_max(unsigned int n, int count) {
 	}
 
 	if (!numbers.count(n)) {
-
 		int nt;
 
 		if (n % 2 == 1) {
@@ -38,7 +37,6 @@ int check_max(unsigned int n, int count) {
 
 // Function that iterates through given integers
 void check_numbers(unsigned int n1, unsigned int n2) {
-
 	bool swapB = false;
 	int max_count = 0;
 	unsigned int max_number;
@@ -48,7 +46,7 @@ void check_numbers(unsigned int n1, unsigned int n2) {
 		swapB = true;
 	}
 
-	for (int i = n1; i <= n2; i++){
+	for (int i = n1; i <= n2; i++) {
 		int temp = check_max(i, 1);
 		if (temp > max_count) {
 			max_number = i;
@@ -67,7 +65,6 @@ void read_numbers() {
 	string s1, s2;
 	unsigned int n1, n2;
 	while (cin >> s1 >> s2) {
-
 		if (s1.empty()) {
 			break;
 		}
@@ -80,6 +77,6 @@ void read_numbers() {
 }
 
 // Main Function
-int main(){
+int main() {
 	read_numbers();
 }
