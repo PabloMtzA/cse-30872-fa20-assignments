@@ -1,4 +1,4 @@
-// Challenge 00
+// Challenge 05
 // Pablo Martinez-Abrego Gonzalez
 
 
@@ -57,8 +57,7 @@ void check_numbers(unsigned int n1, unsigned int n2) {
 	}
 	if (!swapB) {
 		cout << n1 << " " << n2 << " " << max_number << " " << max_count << endl;
-	}
-	else {
+	} else {
 		cout << n2 << " " << n1 << " " << max_number << " " << max_count << endl;
 	}
 }
