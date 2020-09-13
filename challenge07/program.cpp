@@ -63,7 +63,7 @@ void perms(int n) {
 
   while (numer <= MAX_NUM) {
     numer = denom * n;
-      if check_numbers(numer, denom)) {
+      if (check_numbers(numer, denom)) {
         found = true;
         int nsize = to_string(numer).length();
         int dsize = to_string(denom).length();
