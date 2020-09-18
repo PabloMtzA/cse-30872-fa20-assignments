@@ -1,10 +1,11 @@
-// Challenge 00
+// Challenge 01
 // Pablo Martinez-Abrego Gonzalez
 
 
 #include <iostream>
 #include <string>
 #include<limits>
+
 using namespace std;
 
 // Function that checks how many times s2 can be formed with s1
