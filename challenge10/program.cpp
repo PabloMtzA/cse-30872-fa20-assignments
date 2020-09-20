@@ -12,7 +12,7 @@ void lego_bricks(int n1, int n2, int n3, int n4) {
     n2 = n2 / 2;
   } else {
     n2 = (n2 + 1) / 2;
-    if(n1 >= 2) {
+    if (n1 >= 2) {
       n1 = n1 - 2;
     } else {
       n1 = 0;
