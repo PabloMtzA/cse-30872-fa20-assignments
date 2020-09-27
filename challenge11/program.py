@@ -14,9 +14,9 @@ def compute_table(n):
 
     square_roots = []
     i = 1;
-    while (i ** 2  <= n):
+    while (i ** 2 <= n):
         square_roots.append(i**2)
-        i+=1
+        i += 1
 
     # Initialize base cases (ie. coins)
     for square in square_roots:
