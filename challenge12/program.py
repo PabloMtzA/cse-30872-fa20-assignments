@@ -67,7 +67,7 @@ def main():
         except ValueError:
             break
 
-        if (n == 0):
+        if n == 0:
             break
 
         grid  = read_grid(n)
