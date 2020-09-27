@@ -13,8 +13,8 @@ def compute_table(n):
     table = [0] * (n + 1)
 
     square_roots = []
-    i = 1;
-    while (i ** 2 <= n):
+    i = 1
+    while i ** 2 <= n:
         square_roots.append(i**2)
         i += 1
 
