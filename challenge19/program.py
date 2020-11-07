@@ -31,8 +31,7 @@ def find_circuit(n, graph, start, vertex, visited, path):
             if len(visited) == n:
                 path.append(str(start))
                 return path
-            else:
-                return []
+            return []
         else:
             visited.add(vertex)
 
