@@ -17,7 +17,7 @@ vector<string> read_line(string &s) {
   vector<string> expressions;
   string tempString;
 
-  if(s.size() == 1) {
+  if (s.size() == 1) {
     expressions.push_back(s);
   }
 
@@ -46,7 +46,7 @@ int arithmetic(string expression) {
     return stoi(expression);
   }
 
-  expression.erase (0,2);
+  expression.erase(0, 2);
 
   string n;
   int start = 0;
