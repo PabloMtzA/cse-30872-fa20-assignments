@@ -68,7 +68,7 @@ int findMaxBand(int n, int source, int target) {
 }
 
 // Main Execution
-int main(){
+int main() {
 	int network = 1;
 	int total, n;
 	int source, target, connections;
@@ -82,5 +82,4 @@ int main(){
 		cout << "Network " << network << ": Bandwidth is " << total << "." << endl;
 		network++;
 	}
-
 }
