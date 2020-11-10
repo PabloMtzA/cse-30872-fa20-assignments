@@ -19,6 +19,7 @@ void read_graph(int n, int connections) {
 			graph[i][j] = 0;
 		}
 	}
+
 	for(int i = 0; i < connections; i++) {
 		cin >> n1 >> n2 >> cap;
 		graph[n1][n2] += cap;
@@ -60,7 +61,7 @@ int findMaxBand(int n, int source, int target) {
 
 		minimum = INT_MAX;
 		b[source] = 1;
-		if ((find_path_r(n, source, target))) {
+		if (!(find_path_r(n, source, target))) {
 			return total;
 		}
 		total = total + minimum;
